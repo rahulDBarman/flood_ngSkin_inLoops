@@ -28,23 +28,23 @@ Select the ng layer which you want to flood the weights:
 Select all the edge ring which are nearest to joints. Check below image for reference.
 
 Run:
-```commandline
+```python
   edges = cmds.ls(sl=True)
 ```
 
 
 ### Select Joints or Mention Joints name:
-```commandline
+```python
   ## select joints and put in jnts list
   edges = cmds.ls(sl=True)
   jnts = cmds.ls(sl=True)
-  flood_ngSkin_inLoops(jnts, edges)
+  rd_flood_ngSkin_inLoops(jnts, edges)
    
   or
    
   ## directly list joints in arguments
   edges = cmds.ls(sl=True)
-  flood_ngSkin_inLoops(("L_eyelid_orb*Crv??Translate_env","L_eyelid_*Orbital_env"), edges)
+  rd_flood_ngSkin_inLoops(("L_eyelid_orb*Crv??Translate_env","L_eyelid_*Orbital_env"), edges)
 ```
 
 Don't worry about joints and edges list order, it calculates joint to edge distance.
@@ -63,5 +63,4 @@ Example: Orbital area has no overlapping joint.
 If the Joints are overlapping each others.
 Example: Upper and lower lip
 Run the code for upper and lower one by one.
-
 
